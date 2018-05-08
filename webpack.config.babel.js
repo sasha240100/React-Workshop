@@ -10,6 +10,12 @@ export default {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: 'babel-loader'
+      }, {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader?modules=true', 'sass-loader']
+      }, {
+        test: /\.(jpe?g|png)$/,
+        use: 'url-loader'
       }
     ]
   },
